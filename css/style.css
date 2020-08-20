@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+:root {
+  /* Primary */
+  --cyan-color: hsl(180, 66%, 49%);
+  --dark-violet-color: hsl(257, 27%, 26%);
+
+  /* Secondary */
+  --red-color: hsl(0, 87%, 67%);
+
+  /* Neutral */
+  --gray-color: hsl(0, 23%, 30%);
+  --grayish-violet-color: hsl(257, 7%, 63%);
+  --very-dark-blue-color: hsl(255, 11%, 22%);
+  --very-dark-violet-color: hsl(260, 8%, 14%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+}
+
+/*=== GLOBAL ===*/
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.container {
+  padding: 0 100px;
+}
+
+/*=== HEADER ===*/
+header {
+  justify-content: space-between;
+  font-size: 16px;
+}
+
+/*=== HEADER.NAV ===*/
+header .navbar {
+  padding: 30px 0;
+}
+
+header .navbar .logo {
+  width: 100px;
+}
+
+header .navbar ul,
+header .user-access ul {
+  list-style-type: none;
+  position: relative;
+}
+
+header .navbar ul li + li {
+  margin-left: 25px;
+}
+
+header .navbar ul li a,
+header .user-access a {
+  color: var(--grayish-violet-color);
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+}
+
+header .navbar ul .nav-list a::after,
+header .user-access ul .access-login a::after {
+  content: '';
+  width: 0;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  border-bottom: 2px solid var(--very-dark-violet-color);
+}
+
+header .navbar ul li a:hover,
+header .user-access ul .access-login a:hover {
+  color: var(--very-dark-violet-color);
+  transition: 200ms;
+}
+
+header .navbar ul .nav-list a:hover::after,
+header .user-access ul .access-login a:hover::after {
+  width: 100%;
+  transition: width 200ms ease-in-out;
+}
+
+header .user-access ul li + li {
+  margin-left: 35px;
+}
+
+header .user-access ul .access-sign-up a {
+  padding: 5px 15px;
+  color: #fff;
+  background-color: var(--cyan-color);
+  border-radius: 20px;
+}
+
+header .user-access ul .access-sign-up a:hover {
+  color: var(--dark-violet-color);
+  transition: 200ms;
+}
